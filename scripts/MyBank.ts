@@ -16,6 +16,7 @@ async function main() {
   const bankWithdrawTrans = await bankWithdraw.wait();
   console.log('withdrawal receipt is', bankWithdrawTrans);
 
+  /*Details of the Write transaction which is withdraw*/
   //Transaction Hash for Withdraw: 0x3bfada997661f5fbde249513b96a35787328f3f8d91e32484d4329884ce268b1
   //Network Deployed to          : Ropsten
 }
