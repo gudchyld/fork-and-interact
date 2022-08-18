@@ -17,17 +17,15 @@ module.exports = {
         url: INFURA_MAINNET_API_KEY_URL,
       },
     },
-    
-    ropsten: {
-      url: INFURA_ROPSTEN_API_KEY_URL,
-      accounts: [ACCOUNT_PRIVATE_KEY],
-    },
+
+    // ropsten: {
+    //   url: INFURA_ROPSTEN_API_KEY_URL,
+    //   accounts: [ACCOUNT_PRIVATE_KEY],
+    // },
 
     // mainnet: {
     //   url: INFURA_MAINNET_API_KEY_URL,
     //   accounts: [ACCOUNT_PRIVATE_KEY],
     // },
-
-
   },
 };

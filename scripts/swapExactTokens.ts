@@ -40,8 +40,8 @@ async function main() {
   console.log('usdt before swap', usdtBal);
 
   await ROUTER.swapExactTokensForTokens(
-    amountIn,
-    amountOutMin,
+    2000,
+    2000,
     [MaticAddr, USDTAddress],
     MaticHolder,
     Math.floor(Date.now() / 1000) + 60 * 10,
