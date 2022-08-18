@@ -36,12 +36,12 @@ async function main() {
   const matBal = await Matic.balanceOf(MaticHolder);
   const usdtBal = await USDT.balanceOf(MaticHolder);
 
-  console.log('matic before swap', matBal);
-  console.log('usdt before swap', usdtBal);
+  console.log('matic before swap', Number(matBal._hex));
+  console.log('usdt before swap', Number(usdtBal._hex));
 
   await ROUTER.swapExactTokensForTokens(
     2000,
-    2000,
+    1800,
     [MaticAddr, USDTAddress],
     MaticHolder,
     Math.floor(Date.now() / 1000) + 60 * 10,
@@ -51,8 +51,8 @@ async function main() {
   const maticBalAfter = await Matic.balanceOf(MaticHolder);
   const usdtBalAfter = await USDT.balanceOf(MaticHolder);
 
-  console.log('Matic afer swap', maticBalAfter);
-  console.log('usdt after swap', usdtBalAfter);
+  console.log('Matic afer swap', Number(maticBalAfter._hex));
+  console.log('usdt after swap', Number(usdtBalAfter._hex));
 }
 
 main().catch((error) => {
